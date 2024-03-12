@@ -1,0 +1,106 @@
+
+pear-ctrl {
+  margin-top: 9px;
+  margin-left: 9px;
+  position: absolute;
+}
+pear-ctrl[data-platform="darwin"] { float: left; margin-top: 4px; }
+
+pear-ctrl:after {
+  content: '';
+  display: block;
+  height: 1.8rem;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #B0D94413;
+  filter: drop-shadow(2px 10px 6px #888);
+}
+
+button, input {
+  all: unset;
+  border: 1px ridge #B0D944;
+  background: #000;
+  color: #B0D944;
+  padding: .45rem;
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+body {
+  background-color: #001601;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  color: white;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#or {
+  margin: 1.5rem auto;
+}
+
+#setup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#loading {
+  align-self: center;
+}
+
+#orderbook {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: .75rem;
+}
+
+#header {
+  margin-top: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+#details {
+  display: flex;
+  justify-content: space-between;
+}
+
+#feed {
+  flex: 1;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-y: scroll;
+}
+
+#auction-form,
+#upload-form {
+  display: flex;
+}
+
+#upload-form {
+  flex-direction: column;
+}
+
+#auction-form {
+  justify-items: center;
+}
+
+#title {
+  flex: 1;
+}

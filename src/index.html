@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>re: (auctions) - A peer-to-peer auctions house</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type='module' src='./app.js'></script>
+  </head>
+  <body>
+    <pear-ctrl></pear-ctrl>
+    <main>
+      <div id="setup">
+        <form id="join-form">
+          <div>
+            <input required id="room" type="text" placeholder="e.g. A picture of my cat" />
+            <button type="submit">Find auction</button>
+          </div>
+          <span id="not-found-message" class="hidden">No auction room found, please try again.</span>
+        </form>
+        <div id="or">
+          - or -
+        </div>
+        <form id="upload-form" enctype="multipart/form-data">
+          <input required id="title" type="text" placeholder="e.g. A picture of my cat" />
+          <span id="error-message" class="hidden"></span>
+          <div style="display: flex; flex-direction: row;">
+            <input required id="price" type="number" placeholder="e.g. 10 USDt" />
+            <span>&nbsp;USDt</span>
+          </div>
+          <input required id="attachment" type="file" />
+          <span>&nbsp;</span>
+          <button type="submit">Create an auction</button>
+        </form>
+      </div>
+      <div id="loading" class="hidden">Loading ...</div>
+      <div id="orderbook" class="hidden">
+        <div id="header">
+          <div id="details">
+            <div>
+              Topic: <span id="current-topic"></span>
+            </div>
+            <div>
+              Peers: <span id="peers-count">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="feed"></div>
+        <div style="display: flex;">
+          <form id="auction-form">
+            <input id="amount" type="number" placeholder="e.g. 10 USDt" /> USDt
+            <input type="submit" value="Send" />
+          </form>
+          <form id="leave-form">
+            <input type="submit" value="Go back" />
+          </form>
+          <form id="settle-form">
+            <input type="submit" value="Settle to highest bidder" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</html>
